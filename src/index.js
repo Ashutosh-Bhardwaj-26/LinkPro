@@ -1,5 +1,7 @@
 require("dotenv").config();
 require('express-async-errors');
+
+const serverless = require("serverless-http");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -32,3 +34,5 @@ const start = async () => {
 
 
 start();
+module.exports = app;
+module.exports.handler = serverless(app);
