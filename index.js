@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const connectDB = require('./db/auth');
-const auth = require('./Routes/auth');
+const auth = require('./routes/auth');
 const PORT = 5004;
 
 const notFoundMiddleware = require('./middleware/not-found');
