@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const {login,signup} = require('../Controllers/auth');
+const {downloadProfile,downloadLink,uploadProfile,uploadLink} = require('../Controllers/auth');
 
-router.route('/login').post(login);
-router.route('/signup').post(signup);
-
+router.route('/downloadProfile').post(downloadProfile);
+router.route('/downloadLink').post(downloadLink);
+router.route('/uploadProfile').post(uploadProfile);
+router.route('/uploadLink').post(uploadLink);
 
 module.exports = router;
