@@ -21,6 +21,15 @@ app.get("/",(req,res)=>{
     <head>
       <title>My Webpage</title>
     </head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GP5RHFHH7P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GP5RHFHH7P');
+    </script>
     <body>
       <h1>Welcome to my webpage</h1>
     </body>
