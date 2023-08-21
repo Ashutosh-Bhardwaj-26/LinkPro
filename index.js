@@ -16,7 +16,17 @@ app.use(express.json());
 app.use(('/api/v1'),auth);
 //get Response 
 app.get("/",(req,res)=>{
-    res.status(200).json("Server start");
+    const webpage = `
+    <html>
+    <head>
+      <title>My Webpage</title>
+    </head>
+    <body>
+      <h1>Welcome to my webpage</h1>
+    </body>
+    </html>
+    `;
+    res.send(webpage);
 })
 
 app.use(notFoundMiddleware);
